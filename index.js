@@ -13,6 +13,11 @@ app.listen(3001, () =>{
 })
 
 
+app.get("/", (req, res) =>{
+    res.send("Hello Cheese")
+})
+
+
 //Database Connection
 mongoose.connect("mongodb+srv://lipheria:samurott@cluster0.bbpwnrj.mongodb.net/plantidb?retryWrites=true&w=majority")
 
