@@ -34,7 +34,7 @@ app.post("/createUser", (req, res) =>{
 })
 
 app.get("/", (req,res) => {
-    UserModel.find({})
+    UserModel.find({}).toArray()
     .then(users => res.json(users))
     .catch(err => res.json(err))
 })
