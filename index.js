@@ -32,7 +32,7 @@ const connectDB = async () =>{
     }
 }
 
-alert(connectDB())
+connectDB()
 
 //Database Connection
 //mongoose.connect("mongodb+srv://lipheria:samurott@cluster0.bbpwnrj.mongodb.net/plantidb?retryWrites=true&w=majority")
