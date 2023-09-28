@@ -23,9 +23,19 @@ app.get("/", (req, res) =>{
     res.send("Hello Cheese")
 })
 
+const connectDB = async () =>{
+    try{
+        await mongoose.connect("mongodb+srv://lipheria:samurott@cluster0.bbpwnrj.mongodb.net/plantidb?retryWrites=true&w=majority")
+        console.log("Connected")
+    }catch(error){
+        console.log("No connect")
+    }
+}
+
+connectDB()
 
 //Database Connection
-mongoose.connect("mongodb+srv://lipheria:samurott@cluster0.bbpwnrj.mongodb.net/plantidb?retryWrites=true&w=majority")
+//mongoose.connect("mongodb+srv://lipheria:samurott@cluster0.bbpwnrj.mongodb.net/plantidb?retryWrites=true&w=majority")
 
 app.post("/createUser", (req, res) =>{
     UserModel.create(req.body)
