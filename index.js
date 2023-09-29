@@ -19,9 +19,9 @@ app.listen(3001, () =>{
 })
 
 
-app.get("/", (req, res) =>{
-    res.send("Hello Cheese")
-})
+//app.get("/", (req, res) =>{
+  //  res.send("Hello Cheese")
+//})
 
 const connectDB = async () =>{
     try{
