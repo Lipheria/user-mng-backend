@@ -5,7 +5,14 @@ const UserModel = require("./models/Users")
 
 const app = express()
 
-app.use(cors())
+app.use(cors(
+    {
+        origin: ["https://login-backend-mongo.vercel.app"],
+        methods: ["POST", "GET", "DELETE", "PUT", "PATCH", "OPTIONS"],
+        crendentials: true
+    }
+))
+
 app.use(express.json())
 
 app.listen(3001, () =>{
