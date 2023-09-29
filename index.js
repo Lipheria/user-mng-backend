@@ -41,7 +41,7 @@ app.post("/createUser", (req, res) =>{
 })
 
 app.get("/", (req, res) => {
-    UserModel.find({})
+    UserModel.find()
     .then(users => res.json(users.data))
     .catch(err => res.json(err))
 })
